@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Kotlin_Application</string>
+    <string name="hello_auth_fragment">Authorization_fragment</string>
+    <string name="hello_test_fragment">Test_Fragment</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_results_fragment">Results_Fragment</string>
+    <string name="button_to_test_fragment">Сохранить и перейти к тесту</string>
+    <string name="button_to_result_fragment">Ответить</string>
+    <string name="profile">Profile</string>
+    <string name="home">Home</string>
+    <string name="Name_Field">Введите Ваше имя:</string>
+    <string name="Test_Results">Ваши результаты:</string>
+</resources>
