@@ -11,6 +11,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.kotlin_application.databinding.FragmentAuthBinding
 import android.widget.Toast
 import androidx.core.view.get
+import androidx.core.content.edit
 
 // Разместить во фрагменте форму для ввода по Material Design
 
@@ -20,7 +21,7 @@ class AuthFragment : Fragment() {
     private var _binding: FragmentAuthBinding? = null
     private val binding get() = _binding!!
 
-    private val  USERNAME = "user_name"
+    private val USERNAME = "user_name"
 
 
 
@@ -36,11 +37,11 @@ class AuthFragment : Fragment() {
     }
     fun saveSharedPreferences(userName : String) {
 
-        val sharedPref = activity?.getPreferences(Context.MODE_PRIVATE) ?: return
-        with(sharedPref.edit()) {
+        val sharedPreferences = requireActivity().getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
+        sharedPreferences.edit() {
             putString(USERNAME, userName)
-            apply()
         }
+
 
         findNavController().navigate(R.id.action_authFragment_to_testFragment)
     }

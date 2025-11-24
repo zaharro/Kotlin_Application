@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    id("com.google.devtools.ksp")
 }
 
 android {
@@ -56,12 +57,11 @@ dependencies {
     implementation(libs.androidx.navigation.fragment)
     implementation(libs.androidx.navigation.ui)
 
-    // Views/Fragments integration
     val fragment_version = "1.8.9"
-    // Kotlin
     implementation("androidx.fragment:fragment-ktx:$fragment_version")
-
 
     implementation("androidx.core:core-splashscreen:1.2.0")
 
+    ksp("androidx.room:room-compiler:2.8.3")
+    implementation("androidx.room:room-ktx:2.8.3")
 }
