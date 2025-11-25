@@ -61,18 +61,12 @@ class ResultsFragment : Fragment() {
             else -> moderateResults(userName.toString())
         }
 
-       /* val question = when (userResult) {
-            5 -> "вопросов"
-            in 2..4 -> "вопроса"
-            1 -> "вопрос"
-            0 -> "вопросов"
-            else -> "вопросов"
-        }*/
-        binding.results.text = userResult.toString()//"Вы правильно ответили на\n ${userResult}\n $question"
+        binding.results.text = userResult.toString()
     }
 
     fun excellentResults(userName: String) {
         binding.userName.text = "Отличный результат, ${userName}!"
+        binding.lottieAnimation.playAnimation()//Выводится поздравительная анимация
     }
 
     fun moderateResults(userName: String) {

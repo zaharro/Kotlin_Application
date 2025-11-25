@@ -64,4 +64,6 @@ dependencies {
 
     ksp("androidx.room:room-compiler:2.8.3")
     implementation("androidx.room:room-ktx:2.8.3")
+
+    implementation ("com.airbnb.android:lottie:6.1.0")
 }
